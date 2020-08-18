@@ -31,6 +31,7 @@ public class DemoController {
     public String hello() {
         System.out.println(123);
         System.out.println(123456);
+        System.out.println(789);
         return "hello SpringBoot";
     }
 
