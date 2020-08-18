@@ -30,6 +30,7 @@ public class DemoController {
     @ResponseBody
     public String hello() {
         System.out.println(123);
+        System.out.println(123456);
         return "hello SpringBoot";
     }
 
