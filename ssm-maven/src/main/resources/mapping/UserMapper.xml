@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ytc.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.ytc.model.User" >
+    <id column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="userpassword" property="userpassword" jdbcType="VARCHAR" />
+    <result column="userbir" property="userbir" jdbcType="DATE" />
+    <result column="userprice" property="userprice" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    userid, username, userpassword, userbir, userprice
+  </sql>
+  <select id="queryUser" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user where 1=1
+    
+  </select>
+  
+  <select id="queryUserById" parameterType="int" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user where 1=1 and userid=#{userid}
+    
+  </select>
+  
+  <select id="queryUserList" parameterType="user" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user where 1=1
+    <if test="user.username!=null and user.username!=''">
+      and username like '%${user.username}%'
+    </if>
+     limit #{start},#{pagesize}
+  </select>
+  
+  <select id="queryCount" parameterType="user" resultType="long">
+    select count(*) from t_user
+    where 1=1 
+    <if test="user.username!=null and user.username!=''">
+      and username like '%${user.username}%'
+    </if>
+  </select>
+ 
+  <insert id="addUSer" parameterType="user" >
+    insert into t_user ( username, userpassword, 
+      userbir, userprice)
+    values ( #{username}, #{userpassword}, 
+      #{userbir}, #{userprice})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ytc.model.User" >
+    insert into t_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="userpassword != null" >
+        userpassword,
+      </if>
+      <if test="userbir != null" >
+        userbir,
+      </if>
+      <if test="userprice != null" >
+        userprice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        #{userpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userbir != null" >
+        #{userbir,jdbcType=DATE},
+      </if>
+      <if test="userprice != null" >
+        #{userprice,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ytc.model.User" >
+    update t_user
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        userpassword = #{userpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userbir != null" >
+        userbir = #{userbir,jdbcType=DATE},
+      </if>
+      <if test="userprice != null" >
+        userprice = #{userprice,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ytc.model.User" >
+    update t_user
+    set username = #{username,jdbcType=VARCHAR},
+      userpassword = #{userpassword,jdbcType=VARCHAR},
+      userbir = #{userbir,jdbcType=DATE},
+      userprice = #{userprice,jdbcType=DOUBLE}
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+</mapper>

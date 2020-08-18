@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+     <p th:text="哈哈">java121</p>
+    <table border="1">
+      <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>age</td>
+          <td>操作</td>
+      </tr>
+      <tr th:each="s:${list} ">
+          <td th:text="${s.stuid}"></td>
+          <td th:text="${s.stuname}"></td>
+          <td th:text="${s.stuage}"></td>
+          <td><a th:href="@{/user/delstu(stuid=${s.stuid})}">删除</a></td>
+          <td><a th:href="@{/user/toupdatestu(stuid=${s.stuid})}">修改</a></td>
+      </tr>
+
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-api" />
+        <module name="dubbo-consumer" />
+        <module name="dubbo-provider" />
+        <module name="springboot-demo" />
+        <module name="springboot-demo2" />
+        <module name="springboot-dubbo-consumer-anntion" />
+        <module name="springboot-dubbo-consumer-xml" />
+        <module name="springboot-dubbo-proder-anntion" />
+        <module name="springboot-dubbo-provider-xml" />
+        <module name="springboot-mybatis" />
+        <module name="ssm-maven" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="dubbo-api" target="1.7" />
+      <module name="dubbo-consumer" target="1.7" />
+      <module name="dubbo-provider" target="1.7" />
+      <module name="springboot-demo" target="1.8" />
+      <module name="springboot-demo2" target="1.8" />
+      <module name="springboot-dubbo-consumer-anntion" target="1.8" />
+      <module name="springboot-dubbo-consumer-xml" target="1.8" />
+      <module name="springboot-dubbo-proder-anntion" target="8" />
+      <module name="springboot-dubbo-provider-xml" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
+      <module name="ssm-maven" target="1.7" />
+      <module name="workspace-idea" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

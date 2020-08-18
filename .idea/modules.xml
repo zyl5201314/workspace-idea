@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo-api/dubbo-api.iml" filepath="$PROJECT_DIR$/dubbo-api/dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/dubbo-provider/dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-demo/springboot-demo.iml" filepath="$PROJECT_DIR$/springboot-demo/springboot-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-demo2/springboot-demo2.iml" filepath="$PROJECT_DIR$/springboot-demo2/springboot-demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer-anntion/springboot-dubbo-consumer-anntion.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer-anntion/springboot-dubbo-consumer-anntion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer-xml/springboot-dubbo-consumer-xml.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer-xml/springboot-dubbo-consumer-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-proder-anntion/springboot-dubbo-proder-anntion.iml" filepath="$PROJECT_DIR$/springboot-dubbo-proder-anntion/springboot-dubbo-proder-anntion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-provider-xml/springboot-dubbo-provider-xml.iml" filepath="$PROJECT_DIR$/springboot-dubbo-provider-xml/springboot-dubbo-provider-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" filepath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-maven/ssm-maven.iml" filepath="$PROJECT_DIR$/ssm-maven/ssm-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workspace-idea.iml" filepath="$PROJECT_DIR$/workspace-idea.iml" />
+    </modules>
+  </component>
+</project>
