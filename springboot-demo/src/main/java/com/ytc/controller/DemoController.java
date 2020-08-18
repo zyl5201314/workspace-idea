@@ -29,6 +29,7 @@ public class DemoController {
     @RequestMapping("hello")
     @ResponseBody
     public String hello() {
+        System.out.println(123);
         return "hello SpringBoot";
     }
 
